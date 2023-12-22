@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://sworj3qc2m62"]
+
+[ext_resource type="PackedScene" uid="uid://c7o6sber8byr2" path="res://scenes/platform.tscn" id="1_43p3a"]
+[ext_resource type="PackedScene" uid="uid://m6ybvkhhoiv6" path="res://scenes/avatar.tscn" id="2_c28vy"]
+[ext_resource type="PackedScene" uid="uid://c8xhskd4injin" path="res://scenes/goal.tscn" id="3_qbt0e"]
+[ext_resource type="PackedScene" uid="uid://btww8x8xd0fj2" path="res://scenes/ui_summary.tscn" id="4_1ykss"]
+
+[node name="Level" type="Node2D"]
+
+[node name="Environment" type="Node2D" parent="."]
+position = Vector2(-2, 0)
+
+[node name="Platform" parent="Environment" instance=ExtResource("1_43p3a")]
+position = Vector2(116, 171)
+
+[node name="Platform2" parent="Environment" instance=ExtResource("1_43p3a")]
+position = Vector2(269, 223)
+
+[node name="Platform3" parent="Environment" instance=ExtResource("1_43p3a")]
+position = Vector2(423, 288)
+
+[node name="Platform4" parent="Environment" instance=ExtResource("1_43p3a")]
+position = Vector2(569, 345)
+
+[node name="Platform5" parent="Environment" instance=ExtResource("1_43p3a")]
+position = Vector2(708, 411)
+
+[node name="Platform6" parent="Environment" instance=ExtResource("1_43p3a")]
+position = Vector2(852, 480)
+
+[node name="Platform7" parent="Environment" instance=ExtResource("1_43p3a")]
+position = Vector2(1000, 548)
+
+[node name="Avatar" parent="." instance=ExtResource("2_c28vy")]
+position = Vector2(116, 139)
+
+[node name="Goal" parent="." instance=ExtResource("3_qbt0e")]
+position = Vector2(998, 527)
+scale = Vector2(4.96, 1)
+
+[node name="Summary" parent="." instance=ExtResource("4_1ykss")]

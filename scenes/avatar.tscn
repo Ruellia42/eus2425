@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://m6ybvkhhoiv6"]
+
+[ext_resource type="Script" path="res://scripts/avatar.gd" id="1_k0ba2"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vw02x"]
+
+[node name="Avatar" type="CharacterBody2D" groups=["player"]]
+scale = Vector2(0.983051, 1)
+script = ExtResource("1_k0ba2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_vw02x")

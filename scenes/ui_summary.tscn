@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://btww8x8xd0fj2"]
+
+[ext_resource type="Script" path="res://scripts/ui_summary.gd" id="1_enpyr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_icvj6"]
+bg_color = Color(0.286275, 0.286275, 0.286275, 0.454902)
+
+[node name="Summary" type="CanvasLayer"]
+script = ExtResource("1_enpyr")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_icvj6")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.5
+offset_top = -15.5
+offset_right = 32.5
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="ButtonRestart" type="Button" parent="CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Restart"
+
+[connection signal="button_down" from="CenterContainer/VBoxContainer/ButtonRestart" to="." method="_on_restart_button_down"]
