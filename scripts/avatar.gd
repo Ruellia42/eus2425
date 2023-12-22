@@ -11,7 +11,10 @@ var gravity: int = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 
 func _ready() -> void:
-	SignalBus.level_complete.connect(func(): enabled = false)
+	SignalBus.level_complete.connect(func(): 
+		enabled = false
+		velocity.x = 0
+		)
 
 func _physics_process(delta: float) -> void:
 	
