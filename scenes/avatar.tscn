@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://m6ybvkhhoiv6"]
+[gd_scene load_steps=4 format=3 uid="uid://m6ybvkhhoiv6"]
 
 [ext_resource type="Script" path="res://scripts/avatar.gd" id="1_k0ba2"]
+[ext_resource type="AudioStream" uid="uid://cdap7ixsrp1et" path="res://audio/SFX_Jump.wav" id="2_acr33"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vw02x"]
 
@@ -10,3 +11,8 @@ script = ExtResource("1_k0ba2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_vw02x")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_acr33")
+
+[connection signal="on_jump" from="." to="AudioStreamPlayer" method="play"]
