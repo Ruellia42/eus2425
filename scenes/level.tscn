@@ -1,14 +1,25 @@
-[gd_scene load_steps=5 format=3 uid="uid://sworj3qc2m62"]
+[gd_scene load_steps=6 format=3 uid="uid://sworj3qc2m62"]
 
 [ext_resource type="PackedScene" uid="uid://c7o6sber8byr2" path="res://scenes/platform.tscn" id="1_43p3a"]
 [ext_resource type="PackedScene" uid="uid://m6ybvkhhoiv6" path="res://scenes/avatar.tscn" id="2_c28vy"]
 [ext_resource type="PackedScene" uid="uid://c8xhskd4injin" path="res://scenes/goal.tscn" id="3_qbt0e"]
 [ext_resource type="PackedScene" uid="uid://btww8x8xd0fj2" path="res://scenes/ui_summary.tscn" id="4_1ykss"]
+[ext_resource type="PackedScene" uid="uid://bxl5088n1vu6r" path="res://scenes/coin.tscn" id="5_1x5rw"]
 
 [node name="Level" type="Node2D"]
 
+[node name="Summary" parent="." instance=ExtResource("4_1ykss")]
+
 [node name="Environment" type="Node2D" parent="."]
 position = Vector2(-2, 0)
+
+[node name="Collectables" type="Node2D" parent="Environment"]
+position = Vector2(572, 157)
+
+[node name="Coin" parent="Environment/Collectables" instance=ExtResource("5_1x5rw")]
+position = Vector2(-149, 106)
+
+[node name="Coin2" parent="Environment/Collectables" instance=ExtResource("5_1x5rw")]
 
 [node name="Platform" parent="Environment" instance=ExtResource("1_43p3a")]
 position = Vector2(116, 171)
@@ -37,5 +48,3 @@ position = Vector2(116, 139)
 [node name="Goal" parent="." instance=ExtResource("3_qbt0e")]
 position = Vector2(998, 527)
 scale = Vector2(4.96, 1)
-
-[node name="Summary" parent="." instance=ExtResource("4_1ykss")]
