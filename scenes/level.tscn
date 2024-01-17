@@ -39,8 +39,8 @@ layer_0/tile_data = PackedInt32Array(196615, 131076, 1, 262152, 131076, 6, 26215
 [node name="TileMap2" parent="Environment" groups=["spikes"] instance=ExtResource("6_qpbqt")]
 layer_0/tile_data = PackedInt32Array(131078, 524292, 3, 131079, 524292, 3)
 
-[node name="Death_Collider" parent="." instance=ExtResource("7_2vs0s")]
-position = Vector2(52, 634)
+[node name="Death_Collider" parent="Environment" instance=ExtResource("7_2vs0s")]
+position = Vector2(54, 634)
 scale = Vector2(191.924, 1.77053)
 
 [node name="Avatar" parent="." instance=ExtResource("2_c28vy")]

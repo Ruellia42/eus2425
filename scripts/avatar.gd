@@ -47,4 +47,5 @@ func apply_input():
 
 func _on_damage_trigger_body_entered(body):
 	if body.is_in_group("danger"):
+		SignalBus.on_game_over.emit()
 		queue_free()
