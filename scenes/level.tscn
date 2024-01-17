@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://sworj3qc2m62"]
+[gd_scene load_steps=9 format=3 uid="uid://sworj3qc2m62"]
 
 [ext_resource type="PackedScene" uid="uid://dkl4mmya0asgj" path="res://scenes/ui_score.tscn" id="1_6h6up"]
 [ext_resource type="PackedScene" uid="uid://m6ybvkhhoiv6" path="res://scenes/avatar.tscn" id="2_c28vy"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://btww8x8xd0fj2" path="res://scenes/ui_summary.tscn" id="4_1ykss"]
 [ext_resource type="PackedScene" uid="uid://bxl5088n1vu6r" path="res://scenes/coin.tscn" id="5_1x5rw"]
 [ext_resource type="PackedScene" uid="uid://d02n8l2mx10wb" path="res://scenes/tile_map_danger.tscn" id="6_qpbqt"]
+[ext_resource type="PackedScene" uid="uid://dm2vailmg7aqs" path="res://scenes/death_collider.tscn" id="7_2vs0s"]
 [ext_resource type="PackedScene" uid="uid://ceou1lug6d8rs" path="res://scenes/tile_map_level.tscn" id="7_36f6a"]
 
 [node name="Level" type="Node2D"]
@@ -37,6 +38,10 @@ layer_0/tile_data = PackedInt32Array(196615, 131076, 1, 262152, 131076, 6, 26215
 
 [node name="TileMap2" parent="Environment" groups=["spikes"] instance=ExtResource("6_qpbqt")]
 layer_0/tile_data = PackedInt32Array(131078, 524292, 3, 131079, 524292, 3)
+
+[node name="Death_Collider" parent="." instance=ExtResource("7_2vs0s")]
+position = Vector2(52, 634)
+scale = Vector2(191.924, 1.77053)
 
 [node name="Avatar" parent="." instance=ExtResource("2_c28vy")]
 position = Vector2(177, 32)

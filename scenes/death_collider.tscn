@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dm2vailmg7aqs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gw523"]
+size = Vector2(100, 20)
+
+[node name="Death_Collider" type="StaticBody2D" groups=["danger"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_gw523")
+debug_color = Color(1, 0, 0, 0.419608)
