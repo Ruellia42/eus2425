@@ -1,12 +1,11 @@
 [gd_scene load_steps=2 format=3 uid="uid://ceou1lug6d8rs"]
 
-[ext_resource type="TileSet" uid="uid://bhmw7fuw75daq" path="res://tilemaps/tile_set_default.tres" id="1_gg2ee"]
+[ext_resource type="TileSet" uid="uid://bhmw7fuw75daq" path="res://tilemaps/tile_set.tres" id="1_gg2ee"]
 
 [node name="TileMap" type="TileMap"]
 tile_set = ExtResource("1_gg2ee")
 format = 2
 layer_0/name = "Midground"
-layer_0/tile_data = PackedInt32Array(0, 2, 0, 2, 65538, 0, 3, 131074, 0, 4, 131074, 0, 5, 131074, 0, 6, 131074, 0, 7, 196610, 0)
 layer_1/name = "Background"
 layer_1/z_index = -10
 layer_1/tile_data = PackedInt32Array()
