@@ -2,7 +2,7 @@ extends AnimatedSprite2D
 
 @onready var avatar = $".."
 
-func _process(delta):
+func _process(_delta):
 	if abs(avatar.velocity.x) > 0:
 		play("run")
 	else:
