@@ -7,10 +7,6 @@ var score : int = 0
 
 func _ready():
 	SignalBus.on_coin_pickup.connect(handle_coin_pickup)
-	SignalBus.level_complete.connect(
-		func():
-			visible = false	
-	)
 	update_visuals()
 	
 	
