@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://sworj3qc2m62"]
+[gd_scene load_steps=7 format=3 uid="uid://sworj3qc2m62"]
 
+[ext_resource type="PackedScene" uid="uid://dkl4mmya0asgj" path="res://scenes/ui_score.tscn" id="1_6h6up"]
 [ext_resource type="PackedScene" uid="uid://c7o6sber8byr2" path="res://scenes/platform.tscn" id="1_43p3a"]
 [ext_resource type="PackedScene" uid="uid://m6ybvkhhoiv6" path="res://scenes/avatar.tscn" id="2_c28vy"]
 [ext_resource type="PackedScene" uid="uid://c8xhskd4injin" path="res://scenes/goal.tscn" id="3_qbt0e"]
@@ -7,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://bxl5088n1vu6r" path="res://scenes/coin.tscn" id="5_1x5rw"]
 
 [node name="Level" type="Node2D"]
+
+[node name="UIScore" parent="." instance=ExtResource("1_6h6up")]
 
 [node name="Summary" parent="." instance=ExtResource("4_1ykss")]
 
