@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dm2vailmg7aqs" path="res://scenes/death_collider.tscn" id="7_oa5fo"]
 [ext_resource type="PackedScene" uid="uid://m6ybvkhhoiv6" path="res://scenes/avatar.tscn" id="8_ggk8m"]
 
-[node name="Level" type="Node2D"]
+[node name="LevelSample" type="Node2D"]
 
 [node name="UIScore" parent="." instance=ExtResource("1_bgejs")]
 
