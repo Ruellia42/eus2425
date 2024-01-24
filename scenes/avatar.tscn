@@ -28,6 +28,7 @@ size = Vector2(18.3103, 23)
 [node name="Avatar" type="CharacterBody2D" groups=["player"]]
 scale = Vector2(0.983051, 1)
 script = ExtResource("1_k0ba2")
+move_speed = 150.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1

@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://b6udax3xnqh1g"]
+
+[ext_resource type="Script" path="res://scripts/enemy.gd" id="1_ikfen"]
+[ext_resource type="Texture2D" uid="uid://dief4e6rx3caj" path="res://plugins/kenney_pixel-platformer/Tiles/Characters/tile_0013.png" id="1_jitgc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xylsv"]
+size = Vector2(9, 12)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tbrb5"]
+radius = 5.0
+
+[node name="Enemy" type="CharacterBody2D" groups=["danger", "goomba"]]
+script = ExtResource("1_ikfen")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_jitgc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_xylsv")
+
+[node name="FrontCheck" type="Area2D" parent="."]
+position = Vector2(3, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FrontCheck"]
+shape = SubResource("CircleShape2D_tbrb5")
+debug_color = Color(0, 0.639216, 0.388235, 0.419608)
+
+[connection signal="body_entered" from="FrontCheck" to="." method="_on_front_check_body_entered"]

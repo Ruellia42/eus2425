@@ -33,8 +33,7 @@ func _physics_process(delta: float) -> void:
 func apply_input():
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = -jump_velocity
-		on_jump.emit()
+		jump()
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -45,7 +44,15 @@ func apply_input():
 		velocity.x = move_toward(velocity.x, 0, move_speed)
 
 
+func jump():
+	velocity.y = -jump_velocity
+	on_jump.emit()
+
 func _on_damage_trigger_body_entered(body):
 	if body.is_in_group("danger"):
+		if body.is_in_group("goomba") and velocity.y > 0:
+			jump()
+			body.die()
+			return
 		SignalBus.on_game_over.emit()
 		queue_free()
