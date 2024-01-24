@@ -1,0 +1,203 @@
+[gd_scene load_steps=2 format=3 uid="uid://cnbt05jjtemj8"]
+
+[ext_resource type="PackedScene" uid="uid://cw1i3tcuiy254" path="res://scenes/moving_platform.tscn" id="1_06x3d"]
+
+[node name="TransitionTypes" type="Node2D"]
+
+[node name="Linear" parent="." instance=ExtResource("1_06x3d")]
+position = Vector2(107, 40)
+
+[node name="Label" type="Label" parent="Linear"]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 471.0
+offset_top = -12.0
+offset_right = 520.0
+offset_bottom = 11.0
+grow_vertical = 2
+text = "Linear
+"
+horizontal_alignment = 1
+
+[node name="Sine" parent="." instance=ExtResource("1_06x3d")]
+position = Vector2(107, 80)
+transition_type = 1
+
+[node name="Label" type="Label" parent="Sine"]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 471.0
+offset_top = -12.0
+offset_right = 520.0
+offset_bottom = 11.0
+grow_vertical = 2
+text = "Sine
+"
+horizontal_alignment = 1
+
+[node name="Quint" parent="." instance=ExtResource("1_06x3d")]
+position = Vector2(107, 120)
+transition_type = 2
+
+[node name="Label" type="Label" parent="Quint"]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 471.0
+offset_top = -12.0
+offset_right = 520.0
+offset_bottom = 11.0
+grow_vertical = 2
+text = "Quint
+"
+horizontal_alignment = 1
+
+[node name="Quart" parent="." instance=ExtResource("1_06x3d")]
+position = Vector2(107, 160)
+transition_type = 3
+
+[node name="Label" type="Label" parent="Quart"]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 471.0
+offset_top = -12.0
+offset_right = 520.0
+offset_bottom = 11.0
+grow_vertical = 2
+text = "Quart
+"
+horizontal_alignment = 1
+
+[node name="Quad" parent="." instance=ExtResource("1_06x3d")]
+position = Vector2(107, 200)
+transition_type = 4
+
+[node name="Label" type="Label" parent="Quad"]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 471.0
+offset_top = -12.0
+offset_right = 520.0
+offset_bottom = 11.0
+grow_vertical = 2
+text = "Quad
+"
+horizontal_alignment = 1
+
+[node name="Expo" parent="." instance=ExtResource("1_06x3d")]
+position = Vector2(107, 240)
+transition_type = 5
+
+[node name="Label" type="Label" parent="Expo"]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 471.0
+offset_top = -12.0
+offset_right = 520.0
+offset_bottom = 11.0
+grow_vertical = 2
+text = "Expo
+"
+horizontal_alignment = 1
+
+[node name="Elastic" parent="." instance=ExtResource("1_06x3d")]
+position = Vector2(107, 280)
+transition_type = 6
+
+[node name="Label" type="Label" parent="Elastic"]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 471.0
+offset_top = -12.0
+offset_right = 520.0
+offset_bottom = 11.0
+grow_vertical = 2
+text = "Elastic
+"
+horizontal_alignment = 1
+
+[node name="Cubic" parent="." instance=ExtResource("1_06x3d")]
+position = Vector2(107, 320)
+transition_type = 7
+
+[node name="Label" type="Label" parent="Cubic"]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 471.0
+offset_top = -12.0
+offset_right = 520.0
+offset_bottom = 11.0
+grow_vertical = 2
+text = "Cubic"
+horizontal_alignment = 1
+
+[node name="Circ" parent="." instance=ExtResource("1_06x3d")]
+position = Vector2(107, 360)
+transition_type = 8
+
+[node name="Label" type="Label" parent="Circ"]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 471.0
+offset_top = -12.0
+offset_right = 520.0
+offset_bottom = 11.0
+grow_vertical = 2
+text = "Circ"
+horizontal_alignment = 1
+
+[node name="Bounce" parent="." instance=ExtResource("1_06x3d")]
+position = Vector2(107, 400)
+transition_type = 9
+
+[node name="Label" type="Label" parent="Bounce"]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 471.0
+offset_top = -12.0
+offset_right = 520.0
+offset_bottom = 11.0
+grow_vertical = 2
+text = "Bounce"
+horizontal_alignment = 1
+
+[node name="Back" parent="." instance=ExtResource("1_06x3d")]
+position = Vector2(107, 440)
+transition_type = 10
+
+[node name="Label" type="Label" parent="Back"]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 471.0
+offset_top = -12.0
+offset_right = 520.0
+offset_bottom = 11.0
+grow_vertical = 2
+text = "Back"
+horizontal_alignment = 1
+
+[node name="Spring" parent="." instance=ExtResource("1_06x3d")]
+position = Vector2(107, 480)
+transition_type = 11
+
+[node name="Label" type="Label" parent="Spring"]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 471.0
+offset_top = -12.0
+offset_right = 520.0
+offset_bottom = 11.0
+grow_vertical = 2
+text = "Spring"
+horizontal_alignment = 1
