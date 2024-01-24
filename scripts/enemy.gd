@@ -21,7 +21,6 @@ func _physics_process(delta):
 
 
 func _on_front_check_body_entered(body):
-	print(body)
 	if body == self:
 		return
 	direction *= -1
