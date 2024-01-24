@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://h8luaqtc8151"]
+
+[ext_resource type="Script" path="res://scripts/key.gd" id="1_ajgg2"]
+[ext_resource type="Texture2D" uid="uid://x0x8c5hsh2vn" path="res://plugins/kenney_pixel-platformer/Tiles/tile_0027.png" id="1_vvf38"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_d3jx0"]
+
+[node name="Key" type="Area2D"]
+script = ExtResource("1_ajgg2")
+
+[node name="Visual" type="Sprite2D" parent="."]
+texture = ExtResource("1_vvf38")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_d3jx0")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

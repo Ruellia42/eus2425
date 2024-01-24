@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://dboykh3wko6iv"]
+
+[ext_resource type="Texture2D" uid="uid://hmgcv6aq7pco" path="res://plugins/door.png" id="1_7nd0b"]
+[ext_resource type="Script" path="res://scripts/door.gd" id="1_rku1u"]
+[ext_resource type="Texture2D" uid="uid://dtfifqqaxc2vv" path="res://plugins/kenney_pixel-platformer/Tiles/tile_0028.png" id="2_y025o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dmkrd"]
+size = Vector2(6, 54)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fvkmy"]
+size = Vector2(26, 23)
+
+[node name="Door" type="Node2D"]
+script = ExtResource("1_rku1u")
+
+[node name="Visuals" type="Node2D" parent="."]
+
+[node name="Door" type="Sprite2D" parent="Visuals"]
+texture = ExtResource("1_7nd0b")
+
+[node name="Lock" type="Sprite2D" parent="Visuals/Door"]
+position = Vector2(0, 18)
+texture = ExtResource("2_y025o")
+
+[node name="Collider" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collider"]
+shape = SubResource("RectangleShape2D_dmkrd")
+
+[node name="Trigger" type="Area2D" parent="."]
+position = Vector2(0, 17)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trigger"]
+position = Vector2(0, -1.5)
+shape = SubResource("RectangleShape2D_fvkmy")
+debug_color = Color(0, 0.639216, 0.368627, 0.419608)
+
+[connection signal="body_entered" from="Trigger" to="." method="_on_trigger_body_entered"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://sworj3qc2m62"]
+[gd_scene load_steps=13 format=3 uid="uid://sworj3qc2m62"]
 
 [ext_resource type="PackedScene" uid="uid://dkl4mmya0asgj" path="res://scenes/ui_score.tscn" id="1_bgejs"]
 [ext_resource type="PackedScene" uid="uid://btww8x8xd0fj2" path="res://scenes/ui_summary.tscn" id="2_hy307"]
@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://cw1i3tcuiy254" path="res://scenes/moving_platform.tscn" id="8_31d4m"]
 [ext_resource type="PackedScene" uid="uid://m6ybvkhhoiv6" path="res://scenes/avatar.tscn" id="8_ggk8m"]
 [ext_resource type="PackedScene" uid="uid://b6udax3xnqh1g" path="res://scenes/enemy.tscn" id="10_akgst"]
+[ext_resource type="PackedScene" uid="uid://dboykh3wko6iv" path="res://scenes/door.tscn" id="11_kysk4"]
+[ext_resource type="PackedScene" uid="uid://h8luaqtc8151" path="res://scenes/key.tscn" id="12_n630v"]
 
 [node name="LevelSample" type="Node2D"]
 
@@ -51,9 +53,17 @@ transition_type = 4
 
 [node name="Avatar" parent="." instance=ExtResource("8_ggk8m")]
 position = Vector2(177, 32)
-move_speed = 150.0
 
 [node name="Enemy" parent="." instance=ExtResource("10_akgst")]
 position = Vector2(532, 389)
+
+[node name="Door" parent="." instance=ExtResource("11_kysk4")]
+position = Vector2(681, 371)
+
+[node name="Door2" parent="." instance=ExtResource("11_kysk4")]
+position = Vector2(644, 371)
+
+[node name="Key" parent="." instance=ExtResource("12_n630v")]
+position = Vector2(577, 369)
 
 [editable path="Environment/MovingPlatform"]

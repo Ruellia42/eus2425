@@ -1,10 +1,11 @@
 extends CharacterBody2D
-
+class_name Avatar
 
 signal on_jump()
 
 @export var move_speed : float = 300.0
 @export var jump_velocity : float = 400.0
+@export var keys : int = 0
 
 var enabled : bool = true
 
@@ -17,6 +18,7 @@ func _ready() -> void:
 		enabled = false
 		velocity.x = 0
 		)
+	SignalBus.on_keys_changed.emit(keys)
 
 func _physics_process(delta: float) -> void:
 	
@@ -47,6 +49,18 @@ func apply_input():
 func jump():
 	velocity.y = -jump_velocity
 	on_jump.emit()
+	
+
+func use_key() -> bool:
+	if keys <= 0:
+		return false
+	keys -= 1
+	SignalBus.on_keys_changed.emit(keys)
+	return true
+
+func add_key():
+	keys += 1
+	SignalBus.on_keys_changed.emit(keys)
 
 func _on_damage_trigger_body_entered(body):
 	if body.is_in_group("danger"):
