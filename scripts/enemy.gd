@@ -30,5 +30,6 @@ func _on_front_check_body_entered(body):
 	direction *= -1
 	scale.x *= -1
 	
+	
 func die():
 	queue_free()

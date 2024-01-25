@@ -22,17 +22,17 @@ texture = ExtResource("1_7nd0b")
 position = Vector2(0, 18)
 texture = ExtResource("2_y025o")
 
-[node name="Collider" type="StaticBody2D" parent="."]
+[node name="Collider" type="StaticBody2D" parent="Visuals"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Collider"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Visuals/Collider"]
 shape = SubResource("RectangleShape2D_dmkrd")
 
-[node name="Trigger" type="Area2D" parent="."]
+[node name="Trigger" type="Area2D" parent="Visuals"]
 position = Vector2(0, 17)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Trigger"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Visuals/Trigger"]
 position = Vector2(0, -1.5)
 shape = SubResource("RectangleShape2D_fvkmy")
 debug_color = Color(0, 0.639216, 0.368627, 0.419608)
 
-[connection signal="body_entered" from="Trigger" to="." method="_on_trigger_body_entered"]
+[connection signal="body_entered" from="Visuals/Trigger" to="." method="_on_trigger_body_entered"]

@@ -2,6 +2,7 @@ extends CharacterBody2D
 class_name Avatar
 
 signal on_jump()
+signal on_use_key()
 
 @export var move_speed : float = 300.0
 @export var jump_velocity : float = 400.0
@@ -56,6 +57,7 @@ func use_key() -> bool:
 		return false
 	keys -= 1
 	SignalBus.on_keys_changed.emit(keys)
+	on_use_key.emit()
 	return true
 
 func add_key():
