@@ -1,21 +1,41 @@
-[gd_scene load_steps=5 format=3 uid="uid://b6udax3xnqh1g"]
+[gd_scene load_steps=7 format=3 uid="uid://b6udax3xnqh1g"]
 
 [ext_resource type="Script" path="res://scripts/enemy.gd" id="1_ikfen"]
 [ext_resource type="Texture2D" uid="uid://dief4e6rx3caj" path="res://plugins/kenney_pixel-platformer/Tiles/Characters/tile_0013.png" id="1_jitgc"]
+[ext_resource type="Texture2D" uid="uid://bqxlw6cm5e8ku" path="res://plugins/kenney_pixel-platformer/Tiles/Characters/tile_0014.png" id="3_4iiyg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dwwbk"]
+animations = [{
+"frames": [{
+"duration": 5.0,
+"texture": ExtResource("1_jitgc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_4iiyg")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xylsv"]
 size = Vector2(9, 12)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tbrb5"]
-radius = 4.0
+radius = 2.0
 
 [node name="Enemy" type="CharacterBody2D" groups=["danger", "goomba"]]
 script = ExtResource("1_ikfen")
+direction = -1
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_jitgc")
+[node name="Visuals" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_dwwbk")
+animation = &"new_animation"
+autoplay = "new_animation"
+frame = 1
+frame_progress = 1.0
 
-[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="Sprite2D"]
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="Visuals"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, 0)
@@ -28,5 +48,5 @@ position = Vector2(3, 0)
 shape = SubResource("CircleShape2D_tbrb5")
 debug_color = Color(0, 0.639216, 0.388235, 0.419608)
 
-[connection signal="screen_entered" from="Sprite2D/VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_entered"]
+[connection signal="screen_entered" from="Visuals/VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_entered"]
 [connection signal="body_entered" from="FrontCheck" to="." method="_on_front_check_body_entered"]

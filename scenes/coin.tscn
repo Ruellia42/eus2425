@@ -31,6 +31,6 @@ debug_color = Color(0.662745, 0.513726, 0, 0.419608)
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_rhfkd")
 autoplay = "default"
-frame_progress = 0.760048
+frame_progress = 0.0996919
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

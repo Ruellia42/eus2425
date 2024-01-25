@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://m6ybvkhhoiv6"]
+[gd_scene load_steps=9 format=3 uid="uid://m6ybvkhhoiv6"]
 
 [ext_resource type="Script" path="res://scripts/avatar.gd" id="1_k0ba2"]
 [ext_resource type="Texture2D" uid="uid://cu8a4rfwlehw8" path="res://plugins/kenney_pixel-platformer/Tiles/Characters/tile_0000.png" id="3_pumkv"]
 [ext_resource type="Texture2D" uid="uid://1qlpqbckruqw" path="res://plugins/kenney_pixel-platformer/Tiles/Characters/tile_0001.png" id="4_sfrr1"]
 [ext_resource type="Script" path="res://scripts/avatar_animations.gd" id="5_kf4g5"]
+[ext_resource type="AudioStream" uid="uid://cdap7ixsrp1et" path="res://audio/SFX_Jump.wav" id="5_u15bu"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_x5nok"]
 animations = [{
@@ -47,4 +48,8 @@ position = Vector2(-4.54742e-07, 0.5)
 shape = SubResource("RectangleShape2D_mgduu")
 debug_color = Color(0.988235, 0, 0.290196, 0.12549)
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_u15bu")
+
+[connection signal="on_jump" from="." to="AudioStreamPlayer" method="play"]
 [connection signal="body_entered" from="DamageTrigger" to="." method="_on_damage_trigger_body_entered"]

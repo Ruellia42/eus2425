@@ -1,8 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://sworj3qc2m62"]
+[gd_scene load_steps=14 format=3 uid="uid://sworj3qc2m62"]
 
 [ext_resource type="PackedScene" uid="uid://dkl4mmya0asgj" path="res://scenes/ui_score.tscn" id="1_bgejs"]
 [ext_resource type="PackedScene" uid="uid://btww8x8xd0fj2" path="res://scenes/ui_summary.tscn" id="2_hy307"]
-[ext_resource type="PackedScene" uid="uid://bxl5088n1vu6r" path="res://scenes/coin.tscn" id="3_1sx7n"]
 [ext_resource type="PackedScene" uid="uid://c8xhskd4injin" path="res://scenes/goal.tscn" id="4_e6vhn"]
 [ext_resource type="PackedScene" uid="uid://ceou1lug6d8rs" path="res://scenes/tile_map_level.tscn" id="5_ekehc"]
 [ext_resource type="PackedScene" uid="uid://d02n8l2mx10wb" path="res://scenes/tile_map_danger.tscn" id="6_v147n"]
@@ -11,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://m6ybvkhhoiv6" path="res://scenes/avatar.tscn" id="8_ggk8m"]
 [ext_resource type="PackedScene" uid="uid://b6udax3xnqh1g" path="res://scenes/enemy.tscn" id="10_akgst"]
 [ext_resource type="PackedScene" uid="uid://dboykh3wko6iv" path="res://scenes/door.tscn" id="11_kysk4"]
+[ext_resource type="PackedScene" uid="uid://d2wxayo48nd5c" path="res://scenes/coin_w_fx.tscn" id="12_3br8y"]
+[ext_resource type="Texture2D" uid="uid://dc0anl7t2isu5" path="res://plugins/kenney_pixel-platformer/Tilemap/tilemap-backgrounds_packed.png" id="12_bbtub"]
 [ext_resource type="PackedScene" uid="uid://h8luaqtc8151" path="res://scenes/key.tscn" id="12_n630v"]
 
 [node name="LevelSample" type="Node2D"]
@@ -38,17 +39,8 @@ scale = Vector2(0.530476, 3.96933)
 position = Vector2(47, 755)
 scale = Vector2(191.924, 1.77053)
 
-[node name="Coin" parent="Environment" instance=ExtResource("3_1sx7n")]
-position = Vector2(1010, 400)
-
-[node name="Coin2" parent="Environment" instance=ExtResource("3_1sx7n")]
-position = Vector2(1122, 360)
-
-[node name="Coin3" parent="Environment" instance=ExtResource("3_1sx7n")]
-position = Vector2(1226, 326)
-
 [node name="Key" parent="Environment" instance=ExtResource("12_n630v")]
-position = Vector2(821, 296)
+position = Vector2(241, 508)
 
 [node name="MovingPlatform" parent="Environment" instance=ExtResource("8_31d4m")]
 position = Vector2(917, 313)
@@ -64,6 +56,7 @@ position = Vector2(1484, 442)
 
 [node name="Enemy" parent="." instance=ExtResource("10_akgst")]
 position = Vector2(479, 512)
+direction = 1
 
 [node name="Enemy2" parent="." instance=ExtResource("10_akgst")]
 position = Vector2(765, 477)
@@ -82,5 +75,17 @@ limit_right = 2105
 limit_bottom = 725
 position_smoothing_enabled = true
 editor_draw_limits = true
+
+[node name="Tilemap-backgroundsPacked" type="Sprite2D" parent="Camera2D"]
+z_index = -10
+scale = Vector2(1.01724, 1)
+texture = ExtResource("12_bbtub")
+
+[node name="MovingPlatform" parent="." instance=ExtResource("8_31d4m")]
+position = Vector2(108, 473)
+transition_type = 1
+
+[node name="CoinWFx" parent="." instance=ExtResource("12_3br8y")]
+position = Vector2(130, 512)
 
 [editable path="Environment/MovingPlatform"]

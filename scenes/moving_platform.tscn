@@ -10,13 +10,13 @@ size = Vector2(72, 16)
 script = ExtResource("1_ywl3b")
 speed = 200.0
 
-[node name="Goal" type="Node2D" parent="."]
-position = Vector2(323, 0)
-
 [node name="Platform" type="AnimatableBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform"]
+texture = ExtResource("2_lnqbf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform"]
 shape = SubResource("RectangleShape2D_mr1te")
 
-[node name="Sprite2D" type="Sprite2D" parent="Platform"]
-texture = ExtResource("2_lnqbf")
+[node name="Goal" type="Node2D" parent="."]
+position = Vector2(323, 0)
