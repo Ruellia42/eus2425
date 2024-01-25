@@ -15,6 +15,8 @@ script = ExtResource("1_ikfen")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_jitgc")
 
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="Sprite2D"]
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_xylsv")
@@ -26,4 +28,5 @@ position = Vector2(3, 0)
 shape = SubResource("CircleShape2D_tbrb5")
 debug_color = Color(0, 0.639216, 0.388235, 0.419608)
 
+[connection signal="screen_entered" from="Sprite2D/VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_entered"]
 [connection signal="body_entered" from="FrontCheck" to="." method="_on_front_check_body_entered"]

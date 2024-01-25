@@ -15,8 +15,6 @@ var distance
 func _ready():
 	start_pos = platform.position
 	goal_pos = goal.position
-	print(start_pos)
-	print(goal_pos)
 	distance = start_pos.distance_to(goal_pos)
 	print(distance)
 	if speed == 0:
