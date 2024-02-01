@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://sworj3qc2m62"]
+[gd_scene load_steps=13 format=3 uid="uid://sworj3qc2m62"]
 
 [ext_resource type="PackedScene" uid="uid://dkl4mmya0asgj" path="res://scenes/ui_score.tscn" id="1_bgejs"]
 [ext_resource type="PackedScene" uid="uid://btww8x8xd0fj2" path="res://scenes/ui_summary.tscn" id="2_hy307"]
@@ -11,7 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://b6udax3xnqh1g" path="res://scenes/enemy.tscn" id="10_akgst"]
 [ext_resource type="PackedScene" uid="uid://dboykh3wko6iv" path="res://scenes/door.tscn" id="11_kysk4"]
 [ext_resource type="PackedScene" uid="uid://d2wxayo48nd5c" path="res://scenes/coin_w_fx.tscn" id="12_3br8y"]
-[ext_resource type="Texture2D" uid="uid://dc0anl7t2isu5" path="res://plugins/kenney_pixel-platformer/Tilemap/tilemap-backgrounds_packed.png" id="12_bbtub"]
 [ext_resource type="PackedScene" uid="uid://h8luaqtc8151" path="res://scenes/key.tscn" id="12_n630v"]
 
 [node name="LevelSample" type="Node2D"]
@@ -75,11 +74,6 @@ limit_right = 2105
 limit_bottom = 725
 position_smoothing_enabled = true
 editor_draw_limits = true
-
-[node name="Tilemap-backgroundsPacked" type="Sprite2D" parent="Camera2D"]
-z_index = -10
-scale = Vector2(1.01724, 1)
-texture = ExtResource("12_bbtub")
 
 [node name="MovingPlatform" parent="." instance=ExtResource("8_31d4m")]
 position = Vector2(108, 473)
