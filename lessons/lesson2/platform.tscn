@@ -1,10 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://c7o6sber8byr2"]
+[gd_scene load_steps=3 format=3 uid="uid://c7o6sber8byr2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gw523"]
 size = Vector2(100, 20)
+
+[sub_resource type="BoxMesh" id="BoxMesh_kih6y"]
+size = Vector3(100, 20, 0)
 
 [node name="Platform" type="StaticBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_gw523")
 debug_color = Color(1, 1, 1, 0.419608)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+mesh = SubResource("BoxMesh_kih6y")

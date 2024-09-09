@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bxl5088n1vu6r"]
+[gd_scene load_steps=5 format=3 uid="uid://bxl5088n1vu6r"]
 
 [ext_resource type="Script" path="res://scripts/coin.gd" id="1_0ipeu"]
 [ext_resource type="Texture2D" uid="uid://cmhkt733grqku" path="res://plugins/kenney_pixel-platformer/Tiles/tile_0151.png" id="2_ho5wj"]
-[ext_resource type="Texture2D" uid="uid://b475xhcvp7x6f" path="res://plugins/kenney_pixel-platformer/Tiles/tile_0152.png" id="3_8s3r8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hg3mf"]
 
@@ -11,9 +10,6 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_ho5wj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_8s3r8")
 }],
 "loop": true,
 "name": &"default",
@@ -31,6 +27,6 @@ debug_color = Color(0.662745, 0.513726, 0, 0.419608)
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_rhfkd")
 autoplay = "default"
-frame_progress = 0.0996919
+frame_progress = 0.495274
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

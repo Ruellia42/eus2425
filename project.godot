@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Elemente und Strukturen 2425"
-run/main_scene="res://scenes/level_sample.tscn"
+run/main_scene="res://lessons/lesson3/level02.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://plugins/icon.svg"
 
