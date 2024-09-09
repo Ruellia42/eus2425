@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://d2wxayo48nd5c"]
 
-[ext_resource type="PackedScene" uid="uid://bxl5088n1vu6r" path="res://scenes/coin.tscn" id="1_7pdu5"]
+[ext_resource type="PackedScene" uid="uid://bxl5088n1vu6r" path="res://lessons/lesson2/coin.tscn" id="1_7pdu5"]
 [ext_resource type="AudioStream" uid="uid://c5n4p2a8svufg" path="res://audio/SFX_Coin.mp3" id="2_3yag0"]
 
 [node name="CoinWFx" type="Node2D"]

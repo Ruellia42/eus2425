@@ -1,19 +1,19 @@
 [gd_scene load_steps=9 format=3 uid="uid://m6ybvkhhoiv6"]
 
-[ext_resource type="Script" path="res://scripts/avatar.gd" id="1_k0ba2"]
-[ext_resource type="Texture2D" uid="uid://cu8a4rfwlehw8" path="res://plugins/kenney_pixel-platformer/Tiles/Characters/tile_0000.png" id="3_pumkv"]
-[ext_resource type="Texture2D" uid="uid://1qlpqbckruqw" path="res://plugins/kenney_pixel-platformer/Tiles/Characters/tile_0001.png" id="4_sfrr1"]
-[ext_resource type="Script" path="res://scripts/avatar_animations.gd" id="5_kf4g5"]
-[ext_resource type="AudioStream" uid="uid://cdap7ixsrp1et" path="res://audio/SFX_Jump.wav" id="5_u15bu"]
+[ext_resource type="Script" path="res://scripts/avatar.gd" id="1_aocqy"]
+[ext_resource type="Texture2D" uid="uid://cu8a4rfwlehw8" path="res://plugins/kenney_pixel-platformer/Tiles/Characters/tile_0000.png" id="2_tu5f5"]
+[ext_resource type="Texture2D" uid="uid://1qlpqbckruqw" path="res://plugins/kenney_pixel-platformer/Tiles/Characters/tile_0001.png" id="3_mwemx"]
+[ext_resource type="Script" path="res://scripts/avatar_animations.gd" id="4_515w3"]
+[ext_resource type="AudioStream" uid="uid://cdap7ixsrp1et" path="res://audio/SFX_Jump.wav" id="5_ttlsl"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_x5nok"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_pumkv")
+"texture": ExtResource("2_tu5f5")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_sfrr1")
+"texture": ExtResource("3_mwemx")
 }],
 "loop": true,
 "name": &"run",
@@ -28,14 +28,14 @@ size = Vector2(18.3103, 23)
 
 [node name="Avatar" type="CharacterBody2D" groups=["player"]]
 scale = Vector2(0.983051, 1)
-script = ExtResource("1_k0ba2")
+script = ExtResource("1_aocqy")
 move_speed = 150.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_x5nok")
 animation = &"run"
-script = ExtResource("5_kf4g5")
+script = ExtResource("4_515w3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-2.42529e-07, 0.5)
@@ -49,7 +49,7 @@ shape = SubResource("RectangleShape2D_mgduu")
 debug_color = Color(0.988235, 0, 0.290196, 0.12549)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_u15bu")
+stream = ExtResource("5_ttlsl")
 
 [connection signal="on_jump" from="." to="AudioStreamPlayer" method="play"]
 [connection signal="body_entered" from="DamageTrigger" to="." method="_on_damage_trigger_body_entered"]

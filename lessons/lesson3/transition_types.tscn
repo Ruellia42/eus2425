@@ -1,6 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://cnbt05jjtemj8"]
 
-[ext_resource type="PackedScene" uid="uid://cw1i3tcuiy254" path="res://scenes/moving_platform.tscn" id="1_06x3d"]
+[ext_resource type="PackedScene" uid="uid://cw1i3tcuiy254" path="res://lessons/lesson3/moving_platform.tscn" id="1_06x3d"]
+
 
 [node name="TransitionTypes" type="Node2D"]
 position = Vector2(0, 64)
