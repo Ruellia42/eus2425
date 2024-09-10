@@ -7,13 +7,16 @@
 [node name="Midground" type="TileMapLayer" parent="."]
 use_parent_material = true
 tile_set = ExtResource("1_gg2ee")
+metadata/_edit_lock_ = true
 
 [node name="Background" type="TileMapLayer" parent="."]
 z_index = -10
 use_parent_material = true
 tile_set = ExtResource("1_gg2ee")
+metadata/_edit_lock_ = true
 
 [node name="Foreground" type="TileMapLayer" parent="."]
 z_index = 10
 use_parent_material = true
 tile_set = ExtResource("1_gg2ee")
+metadata/_edit_lock_ = true

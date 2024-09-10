@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://bcx5v0qxjwurk"]
+
+[ext_resource type="PackedScene" uid="uid://ceou1lug6d8rs" path="res://lessons/lesson2/tile_map_level.tscn" id="1_8b7hp"]
+[ext_resource type="PackedScene" uid="uid://dkl4mmya0asgj" path="res://lessons/lesson2/ui_score.tscn" id="1_28pjg"]
+[ext_resource type="PackedScene" uid="uid://btww8x8xd0fj2" path="res://lessons/lesson2/ui_summary.tscn" id="2_dy6y8"]
+[ext_resource type="PackedScene" uid="uid://m6ybvkhhoiv6" path="res://lessons/lesson2/avatar_new.tscn" id="3_8d5pj"]
+
+[node name="MyLevel" type="Node2D"]
+
+[node name="UIScore" parent="." instance=ExtResource("1_28pjg")]
+
+[node name="Summary" parent="." instance=ExtResource("2_dy6y8")]
+visible = false
+
+[node name="Avatar" parent="." instance=ExtResource("3_8d5pj")]
+position = Vector2(63, 234)
+scale = Vector2(1, 1.017)
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Avatar"]
+remote_path = NodePath("../../Camera2D")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(63, 234)
+scale = Vector2(1, 1.017)
+offset = Vector2(0, -20)
+zoom = Vector2(2, 2)
+limit_left = 14
+limit_top = 5
+limit_right = 1715
+limit_bottom = 635
+position_smoothing_enabled = true
+editor_draw_limits = true
+
+[node name="Environment" type="Node" parent="."]
+
+[node name="TileMap" parent="Environment" instance=ExtResource("1_8b7hp")]
+
+[node name="Midground" parent="Environment/TileMap" index="0"]
+tile_map_data = PackedByteArray(0, 0, 3, 0, 18, 0, 4, 0, 0, 0, 0, 0, 0, 0)
+
+[editable path="Environment/TileMap"]
