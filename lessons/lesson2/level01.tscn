@@ -35,9 +35,6 @@ tile_map_data = PackedByteArray("AAAFAA8ABAARAAAAAAAFABAABAARAAEAAAAFABEABAARAAI
 [node name="Foreground" parent="Environment/TileMap" index="2"]
 tile_map_data = PackedByteArray("AAAKABMABAAEAAYAAAARABMABAAEAAYAAAA=")
 
-[node name="Goal" parent="Environment" instance=ExtResource("3_54417")]
-position = Vector2(1134, 342)
-
 [node name="Death_Collider" parent="Environment" instance=ExtResource("4_toicp")]
 position = Vector2(584, 656)
 scale = Vector2(12.1217, -1.12149)
@@ -55,5 +52,8 @@ position = Vector2(702, 342)
 
 [node name="Coin4" parent="Coins" instance=ExtResource("8_56xfc")]
 position = Vector2(1008, 279)
+
+[node name="Goal" parent="." instance=ExtResource("3_54417")]
+position = Vector2(1134, 342)
 
 [editable path="Environment/TileMap"]

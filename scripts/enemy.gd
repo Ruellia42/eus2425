@@ -25,6 +25,12 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, speed)
 
 	move_and_slide()
+	
+	for i in get_slide_collision_count():
+		var coll = get_slide_collision(i)
+		if coll.get_collider():
+			if coll.get_collider().name == "Water":
+				die()
 
 
 func _on_front_check_body_entered(body):

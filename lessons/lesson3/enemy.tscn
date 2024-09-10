@@ -49,4 +49,5 @@ shape = SubResource("CircleShape2D_tbrb5")
 debug_color = Color(0, 0.639216, 0.388235, 0.419608)
 
 [connection signal="screen_entered" from="Visuals/VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_entered"]
+[connection signal="screen_exited" from="Visuals/VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
 [connection signal="body_entered" from="FrontCheck" to="." method="_on_front_check_body_entered"]

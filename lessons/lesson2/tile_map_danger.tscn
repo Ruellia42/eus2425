@@ -4,16 +4,16 @@
 
 [node name="TileMap_Danger" type="Node" groups=["danger"]]
 
-[node name="Midground" type="TileMapLayer" parent="."]
+[node name="Water" type="TileMapLayer" parent="." groups=["danger"]]
 use_parent_material = true
 tile_set = ExtResource("1_fgmlj")
 
-[node name="Background" type="TileMapLayer" parent="."]
+[node name="Background" type="TileMapLayer" parent="." groups=["danger"]]
 z_index = -10
 use_parent_material = true
 tile_set = ExtResource("1_fgmlj")
 
-[node name="Foreground" type="TileMapLayer" parent="."]
+[node name="Foreground" type="TileMapLayer" parent="." groups=["danger"]]
 z_index = 10
 use_parent_material = true
 tile_set = ExtResource("1_fgmlj")
