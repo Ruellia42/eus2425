@@ -83,6 +83,12 @@ position = Vector2(990, 117)
 [node name="CoinWFx" parent="Coins" instance=ExtResource("8_w2vkg")]
 position = Vector2(261, 216)
 
+[node name="CoinWFx12" parent="Coins" instance=ExtResource("8_w2vkg")]
+position = Vector2(342, 252)
+
+[node name="CoinWFx13" parent="Coins" instance=ExtResource("8_w2vkg")]
+position = Vector2(396, 252)
+
 [node name="CoinWFx2" parent="Coins" instance=ExtResource("8_w2vkg")]
 position = Vector2(495, 225)
 
