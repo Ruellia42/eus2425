@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://btww8x8xd0fj2"]
+[gd_scene load_steps=7 format=3 uid="uid://btww8x8xd0fj2"]
 
 [ext_resource type="Script" path="res://scripts/ui_summary.gd" id="1_enpyr"]
 
@@ -6,12 +6,19 @@
 bg_color = Color(0.286275, 0.286275, 0.286275, 0.454902)
 
 [sub_resource type="SystemFont" id="SystemFont_u2fv2"]
+subpixel_positioning = 0
 
 [sub_resource type="LabelSettings" id="LabelSettings_x8m4y"]
 font = SubResource("SystemFont_u2fv2")
 font_size = 42
 outline_size = 6
 outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="InputEventAction" id="InputEventAction_cj0tl"]
+action = &"button_click"
+
+[sub_resource type="Shortcut" id="Shortcut_jmhv5"]
+events = [SubResource("InputEventAction_cj0tl")]
 
 [node name="Summary" type="CanvasLayer"]
 script = ExtResource("1_enpyr")
@@ -50,6 +57,7 @@ custom_minimum_size = Vector2(150, 50)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+shortcut = SubResource("Shortcut_jmhv5")
 text = "Restart"
 
-[connection signal="button_down" from="CenterContainer/VBoxContainer/ButtonRestart" to="." method="_on_restart_button_down"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/ButtonRestart" to="." method="_on_restart_button_pressed"]

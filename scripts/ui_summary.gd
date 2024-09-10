@@ -24,5 +24,5 @@ func enable_summary(message : String):
 	visible = true
 	label.text = message
 
-func _on_restart_button_down() -> void:
+func _on_restart_button_pressed() -> void:
 	get_tree().reload_current_scene()
