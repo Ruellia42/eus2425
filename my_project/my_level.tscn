@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://ceou1lug6d8rs" path="res://lessons/lesson2/tile_map_level.tscn" id="1_8b7hp"]
 [ext_resource type="PackedScene" uid="uid://dkl4mmya0asgj" path="res://lessons/lesson2/ui_score.tscn" id="1_28pjg"]
 [ext_resource type="PackedScene" uid="uid://btww8x8xd0fj2" path="res://lessons/lesson2/ui_summary.tscn" id="2_dy6y8"]
-[ext_resource type="PackedScene" uid="uid://m6ybvkhhoiv6" path="res://lessons/lesson2/avatar_new.tscn" id="3_8d5pj"]
+[ext_resource type="PackedScene" uid="uid://m6ybvkhhoiv6" path="res://lessons/lesson2/avatar.tscn" id="3_8d5pj"]
 
 [node name="MyLevel" type="Node2D"]
 

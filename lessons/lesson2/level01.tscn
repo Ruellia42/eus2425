@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://ceou1lug6d8rs" path="res://lessons/lesson2/tile_map_level.tscn" id="1_q6qo0"]
 [ext_resource type="PackedScene" uid="uid://btww8x8xd0fj2" path="res://lessons/lesson2/ui_summary.tscn" id="2_2jtqg"]
 [ext_resource type="PackedScene" uid="uid://c8xhskd4injin" path="res://lessons/lesson2/goal.tscn" id="3_54417"]
-[ext_resource type="PackedScene" uid="uid://m6ybvkhhoiv6" path="res://lessons/lesson2/avatar_new.tscn" id="3_hnudo"]
+[ext_resource type="PackedScene" uid="uid://m6ybvkhhoiv6" path="res://lessons/lesson2/avatar.tscn" id="3_hnudo"]
 [ext_resource type="PackedScene" uid="uid://dm2vailmg7aqs" path="res://lessons/lesson2/death_collider.tscn" id="4_toicp"]
 [ext_resource type="PackedScene" uid="uid://bxl5088n1vu6r" path="res://lessons/lesson2/coin.tscn" id="8_56xfc"]
 
