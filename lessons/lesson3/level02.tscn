@@ -6,12 +6,12 @@
 [ext_resource type="PackedScene" uid="uid://ceou1lug6d8rs" path="res://lessons/lesson2/tile_map_level.tscn" id="4_21rk5"]
 [ext_resource type="PackedScene" uid="uid://d02n8l2mx10wb" path="res://lessons/lesson2/tile_map_danger.tscn" id="5_1ttko"]
 [ext_resource type="PackedScene" uid="uid://c8xhskd4injin" path="res://lessons/lesson2/goal.tscn" id="5_8vkfi"]
-[ext_resource type="PackedScene" uid="uid://h8luaqtc8151" path="res://lessons/lesson3/key.tscn" id="5_wq76k"]
 [ext_resource type="PackedScene" uid="uid://dm2vailmg7aqs" path="res://lessons/lesson2/death_collider.tscn" id="6_fsrt4"]
 [ext_resource type="PackedScene" uid="uid://dboykh3wko6iv" path="res://lessons/lesson3/door.tscn" id="8_nwvay"]
 [ext_resource type="PackedScene" uid="uid://d2wxayo48nd5c" path="res://lessons/lesson3/coin_w_fx.tscn" id="8_w2vkg"]
 [ext_resource type="PackedScene" uid="uid://cw1i3tcuiy254" path="res://lessons/lesson3/moving_platform.tscn" id="9_cd3eb"]
 [ext_resource type="PackedScene" uid="uid://b6udax3xnqh1g" path="res://lessons/lesson3/enemy.tscn" id="10_4rfr0"]
+[ext_resource type="PackedScene" uid="uid://blpcgd8o3xq8n" path="res://lessons/lesson3/key_w_fx.tscn" id="12_pc8if"]
 
 [node name="Level02" type="Node2D"]
 
@@ -128,7 +128,7 @@ position = Vector2(1674, 306)
 [node name="Door" parent="." instance=ExtResource("8_nwvay")]
 position = Vector2(1476, 243)
 
-[node name="Key" parent="." instance=ExtResource("5_wq76k")]
+[node name="KeyWFx" parent="." instance=ExtResource("12_pc8if")]
 position = Vector2(1053, 81)
 
 [editable path="Environment/TileMap"]

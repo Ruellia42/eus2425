@@ -45,6 +45,11 @@ func apply_input():
 		velocity.x = direction * move_speed
 	else:
 		velocity.x = move_toward(velocity.x, 0, move_speed)
+	
+	if Input.is_action_pressed("ui_left"):
+		$AnimatedSprite2D.flip_h = false
+	elif Input.is_action_pressed("ui_right"):
+		$AnimatedSprite2D.flip_h = true
 
 
 func jump():
